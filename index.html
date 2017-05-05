@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cherry-pick example</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<h1 align="center">Как переместить коммит с одной ветки на другую с помощью "cherry-pick"</h1>
+
+		<p">Сделать cherry-pick крайне просто, и делается это всего в три шага, а именно:</p>
+		<p>К примеру у нас есть две ветки: <b>master</b> и <b>develop</b></p>
+			<p><img src="img\branches.jpg"></p>
+
+		<p>На ветке <b>master</b> у нас 3 коммита: Commit 1, Commit 2, Commit3</p>
+			<p><img src="img\master-commits.jpg"></p>
+
+		<p>А на <b>develop</b> один коммит "Commit 1"</p>
+			<p><img src="img\develop-commit.jpg"></p>
+
+		<p>Так вот нам например нужно перенести коммит <b>"Commit 2"</b> с ветки <b>master</b> в <b>develop</b>. Для этого:</p>
+			<h3>1.С помощью команды "git log" выводим все коммиты и копируем хеш нужного.</h3>
+				<p><img src="img\hash.jpg"></p>
+			<h3>2.С помощью "git checkout develop" переключаемся обратно на ветку <b>develop</b>.</h3>
+				<p><img src="img\checkout.jpg"></p>
+			<h3>3.Вводим команду "git cherry-pick 67ee85930870405a0403182b8739ad5a54ee4e3d" т.е вставляем хеш нужного коммита.</h3>
+				<p><img src=" img\cherry-pick.jpg"></p>
+		<h3>И проверяем "git log"</br>Видим перенесённый коммит.</h3>
+			<p><img src="img\final-log.jpg"></p>
+				 
+	<h1 align="center">Вот и всё!)</h1>
+</body>
+</html>
